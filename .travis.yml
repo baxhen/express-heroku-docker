@@ -4,10 +4,10 @@ services:
   - docker
 
 before_install:
-  - docker build -t baxhen/docker-react -f Dockerfile.dev .
+  - docker build -t baxhen/express-docker-heroku -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true baxhen/docker-react npm run test
+  - docker run -e CI=true baxhen/express-docker-heroku npm run test
 
 deploy:
   provider: heroku
