@@ -12,6 +12,6 @@ script:
 deploy:
   provider: heroku
   api_key: $HEROKU_ACCESS_KEY
-  app: docker-react-heroku-baxhen
+  app: express-docker-heroku
   on:
     branch: master
