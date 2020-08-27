@@ -13,5 +13,8 @@ deploy:
   provider: heroku
   api_key: $HEROKU_ACCESS_KEY
   app: express-docker-heroku
+  script:
+    - heroku container:push web -a express-docker-heroku
+    - heroku container:release web -a express-docker-heroku
   on:
     branch: master
